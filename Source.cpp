@@ -62,6 +62,16 @@ public:
 	}
 };
 
+class Okok : public Enemy {
+public:
+	void attack() {
+		cout << "Okok! - " << attackPower << endl << endl;
+	}
+	void healt() {
+		cout << "OkokH! - " << health << endl;
+	}
+};
+
 
 int main() {
 	Sniper  s1;
@@ -72,6 +82,7 @@ int main() {
 	Monster m;
 	Enemy* e3 = &n;
 	Enemy* e4 = &m;
+	Okok a;
 	e1->setAttackPower(20);
 	e1->setHealth(50);
 	e2->setAttackPower(80);
@@ -90,4 +101,5 @@ int main() {
 	s.healt();
 	n.healt();
 	m.healt();
+	a.setHealth();
 }
